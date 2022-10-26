@@ -11,6 +11,7 @@ export const Plant = (props) => {
         margin: 20,
         alignItems: "center",
         backgroundColor: "#fff",
+        borderWidth: 2,
         borderRadius: 15,
       }}
     >
@@ -22,7 +23,7 @@ export const Plant = (props) => {
       <Text style={{ fontSize: 30, fontWeight: "800" }}>
         {props.plant.name}
       </Text>
-      <Text style={{ fontStyle: "italic" }}>
+      <Text style={{ fontStyle: "italic", fontWeight: "200" }}>
         {props.plant.water} - {props.plant.sun}
       </Text>
     </View>

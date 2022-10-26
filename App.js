@@ -16,13 +16,14 @@ export default function App() {
       >
         <Text
           style={{
-            fontSize: 80,
+            fontSize: 50,
             padding: 20,
             paddingTop: 50,
             backgroundColor: "#83A0A0",
+            fontWeight: "800",
           }}
         >
-          Plants
+          Rise of the planet of the plants
         </Text>
         {plants.map((plant, index) => {
           return <Plant key={index} plant={plant} />;
