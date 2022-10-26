@@ -1,10 +1,10 @@
-import React from 'react';
-import { Text, View } from 'react-native';
+import React from "react";
+import { Text, View } from "react-native";
 
-export const Plant = () => {
-    return (
-        <View>
-            <Text>Text</Text>
-        </View>
-    );
-}
+export const Plant = (props) => {
+  return (
+    <View>
+      <Text>{props.plant.name}</Text>
+    </View>
+  );
+};
