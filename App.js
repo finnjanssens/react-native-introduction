@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, ScrollView } from "react-native";
+import { StyleSheet, Text, View, ScrollView, SafeAreaView } from "react-native";
 
 import { plants } from "./assets/plants";
 import { Plant } from "./components/Plant/Plant";
@@ -7,7 +7,7 @@ import { Plant } from "./components/Plant/Plant";
 export default function App() {
   console.log("test");
   return (
-    <View>
+    <SafeAreaView>
       <ScrollView
         contentContainerStyle={{
           backgroundColor: "#83A0A0",
@@ -29,6 +29,6 @@ export default function App() {
           return <Plant key={index} plant={plant} />;
         })}
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
