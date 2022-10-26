@@ -7,10 +7,27 @@ import { Plant } from "./components/Plant/Plant";
 export default function App() {
   console.log("test");
   return (
-    <ScrollView>
-      {plants.map((plant, index) => {
-        return <Plant key={index} plant={plant} />;
-      })}
-    </ScrollView>
+    <View>
+      <ScrollView
+        contentContainerStyle={{
+          backgroundColor: "#83A0A0",
+          paddingBottom: 50,
+        }}
+      >
+        <Text
+          style={{
+            fontSize: 80,
+            padding: 20,
+            paddingTop: 50,
+            backgroundColor: "#83A0A0",
+          }}
+        >
+          Plants
+        </Text>
+        {plants.map((plant, index) => {
+          return <Plant key={index} plant={plant} />;
+        })}
+      </ScrollView>
+    </View>
   );
 }

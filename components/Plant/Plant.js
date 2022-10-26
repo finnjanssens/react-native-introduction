@@ -3,15 +3,28 @@ import { Text, View, Image } from "react-native";
 
 export const Plant = (props) => {
   return (
-    <View style={{ width: "100%", padding: 10 }}>
+    <View
+      style={{
+        alignSelf: "center",
+        width: "80%",
+        padding: 10,
+        margin: 20,
+        alignItems: "center",
+        backgroundColor: "#fff",
+        borderRadius: 15,
+      }}
+    >
       <Image
         style={{ width: "80%", height: 300 }}
         source={{ uri: props.plant.image }}
-        resizeMode={"cover"} // cover or contain its upto you view look
+        resizeMode={"contain"} // cover or contain its upto you view look
       />
-      <Text>{props.plant.name}</Text>
-      <Text>{props.plant.water}</Text>
-      <Text>{props.plant.sun}</Text>
+      <Text style={{ fontSize: 30, fontWeight: "800" }}>
+        {props.plant.name}
+      </Text>
+      <Text style={{ fontStyle: "italic" }}>
+        {props.plant.water} - {props.plant.sun}
+      </Text>
     </View>
   );
 };
