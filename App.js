@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
 
 import { plants } from "./assets/plants";
 import { Plant } from "./components/Plant/Plant";
@@ -7,19 +7,10 @@ import { Plant } from "./components/Plant/Plant";
 export default function App() {
   console.log("test");
   return (
-    <View style={styles.container}>
+    <ScrollView>
       {plants.map((plant, index) => {
         return <Plant key={index} plant={plant} />;
       })}
-    </View>
+    </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

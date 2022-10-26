@@ -3,7 +3,7 @@ import { Text, View, Image } from "react-native";
 
 export const Plant = (props) => {
   return (
-    <View style={{ width: "100%" }}>
+    <View style={{ width: "100%", padding: 10 }}>
       <Image
         style={{ width: "80%", height: 300 }}
         source={{ uri: props.plant.image }}
